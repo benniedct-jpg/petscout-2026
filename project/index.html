@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>펫스카웃 캠핑 페스티벌 — 랜딩 시안 3종</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Noto Sans KR',sans-serif;font-weight:300;background:#1A1813;color:#EDE8DD;line-height:1.7;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+  a{color:inherit;text-decoration:none}
+  .of{font-family:'Cormorant',serif;font-weight:600}
+  header{padding:64px 0 40px;border-bottom:1px solid rgba(237,232,221,.14)}
+  .eyebrow{font-family:'Cormorant';font-weight:600;letter-spacing:.26em;text-transform:uppercase;font-size:13px;color:#C9A07E}
+  header h1{font-size:clamp(32px,5vw,52px);font-weight:400;margin:16px 0 14px;line-height:1.15}
+  header p{color:rgba(237,232,221,.6);max-width:60ch;font-size:16px}
+  .facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+  .facts span{border:1px solid rgba(237,232,221,.22);border-radius:999px;padding:6px 15px;font-size:13px;color:rgba(237,232,221,.8)}
+
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:54px 0 30px}
+  @media(max-width:920px){.grid{grid-template-columns:1fr;max-width:520px;margin:0 auto}}
+  .card{background:#22201A;border:1px solid rgba(237,232,221,.14);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:transform .15s,border-color .15s}
+  .card:hover{transform:translateY(-4px);border-color:rgba(201,160,126,.5)}
+  .thumb{aspect-ratio:16/11;position:relative;overflow:hidden;border-bottom:1px solid rgba(237,232,221,.14)}
+  .thumb .mini{position:absolute;inset:0;transform:scale(.5);transform-origin:top left;width:200%;height:200%;border:0;pointer-events:none}
+  .badge-n{position:absolute;top:12px;left:12px;z-index:2;font-family:'Cormorant';font-weight:600;font-size:13px;letter-spacing:.1em;background:#1A1813;color:#EDE8DD;border:1px solid rgba(237,232,221,.3);padding:4px 11px;border-radius:999px}
+  .cbody{padding:24px;display:flex;flex-direction:column;gap:12px;flex:1}
+  .cbody .tag{font-family:'Cormorant';font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:12px;color:#C9A07E}
+  .cbody h2{font-size:23px;font-weight:500}
+  .cbody .desc{font-size:14px;color:rgba(237,232,221,.62)}
+  .specs{display:flex;flex-direction:column;gap:7px;margin-top:4px}
+  .specs div{display:flex;gap:10px;font-size:13px;color:rgba(237,232,221,.75)}
+  .specs b{color:#C9A07E;font-weight:500;min-width:54px;font-family:'Cormorant';letter-spacing:.04em}
+  .sw{display:inline-flex;gap:5px;margin-top:2px}
+  .sw i{width:18px;height:18px;border-radius:50%;border:1px solid rgba(0,0,0,.25)}
+  .open{margin-top:auto;display:inline-flex;align-items:center;justify-content:space-between;border:1px solid rgba(237,232,221,.25);border-radius:6px;padding:13px 18px;font-size:14px;transition:background .15s,color .15s}
+  .card:hover .open{background:#C9A07E;color:#1A1813;border-color:#C9A07E}
+
+  .note{padding:20px 0 70px;color:rgba(237,232,221,.5);font-size:13px;max-width:70ch}
+  .note b{color:rgba(237,232,221,.75);font-weight:500}
+</style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="eyebrow">2026 Korea PetScout &amp; Camping Festival</div>
+      <h1>예약 랜딩페이지 — 시안 3종</h1>
+      <p>같은 행사, 같은 예약 기능. 단, <b style="color:#C9A07E;font-weight:400">비주얼·구조·메시지 전략</b>이 서로 다른 세 방향입니다. 핵심 과제(“캠핑치고 비싼 가격을 어떻게 납득시키나”)를 각 시안이 다르게 풉니다. 카드를 눌러 전체 페이지를 확인하세요.</p>
+      <div class="facts">
+        <span>📍 고성 잼버리 캠핑장</span>
+        <span>📅 2026.09.04–06 · 2박 3일</span>
+        <span>🎪 350 사이트 선택 예약</span>
+        <span>💳 PG 간편결제</span>
+        <span>🏛 강원도반려동물협회</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="grid">
+      <a class="card" href="options/A-scout-adventure.html">
+        <div class="thumb"><span class="badge-n">Option A</span><iframe class="mini" src="options/A-scout-adventure.html" scrolling="no" tabindex="-1" aria-hidden="true"></iframe></div>
+        <div class="cbody">
+          <div class="tag">Scout Adventure</div>
+          <h2>모험 · 배지 컬렉션</h2>
+          <p class="desc">스카웃 배지 모티프로 “미션을 깨는 3일”을 강조. 게임처럼 가치를 쌓아 가격을 납득시키는 방향.</p>
+          <div class="specs">
+            <div><b>메시지</b><span>“캠핑값이 아니라 3일 페스티벌 입장권”</span></div>
+            <div><b>무드</b><span>볼드 · 아웃도어 · 손맛 있는</span></div>
+            <div><b>컬러</b><span class="sw"><i style="background:#F4EDDD"></i><i style="background:#2F6B4F"></i><i style="background:#D9722E"></i><i style="background:#2A2018"></i></span></div>
+          </div>
+          <span class="open">전체 보기 <span class="of">→</span></span>
+        </div>
+      </a>
+
+      <a class="card" href="options/B-festival-zine.html">
+        <div class="thumb"><span class="badge-n">Option B</span><iframe class="mini" src="options/B-festival-zine.html" scrolling="no" tabindex="-1" aria-hidden="true"></iframe></div>
+        <div class="cbody">
+          <div class="tag">Festival Zine</div>
+          <h2>라인업 · 페스티벌 에너지</h2>
+          <p class="desc">음악 페스티벌 포스터 감성. 라인업과 분위기로 “놓치면 아쉬운 주말”을 만들어 예약을 끌어내는 방향.</p>
+          <div class="specs">
+            <div><b>메시지</b><span>“우리 강아지가 기다려온 단 한 번의 주말”</span></div>
+            <div><b>무드</b><span>플레이풀 · 스티커 · 팝</span></div>
+            <div><b>컬러</b><span class="sw"><i style="background:#FBF8F0"></i><i style="background:#FF5A4D"></i><i style="background:#2C4BE0"></i><i style="background:#FFC23B"></i></span></div>
+          </div>
+          <span class="open">전체 보기 <span class="of">→</span></span>
+        </div>
+      </a>
+
+      <a class="card" href="options/C-premium-retreat.html">
+        <div class="thumb"><span class="badge-n">Option C</span><iframe class="mini" src="options/C-premium-retreat.html" scrolling="no" tabindex="-1" aria-hidden="true"></iframe></div>
+        <div class="cbody">
+          <div class="tag">Premium Retreat</div>
+          <h2>큐레이션 · 가치 분해</h2>
+          <p class="desc">에디토리얼 톤으로 “올인클루시브 리트릿”을 제안. 항목별 가격을 분해해 패스가 오히려 이득임을 보여주는 방향.</p>
+          <div class="specs">
+            <div><b>메시지</b><span>“따로 사면 더 비싼 경험을 한 패스에”</span></div>
+            <div><b>무드</b><span>차분 · 프리미엄 · 신뢰</span></div>
+            <div><b>컬러</b><span class="sw"><i style="background:#F5F1E8"></i><i style="background:#7A8B6F"></i><i style="background:#BC7A5A"></i><i style="background:#23201A"></i></span></div>
+          </div>
+          <span class="open">전체 보기 <span class="of">→</span></span>
+        </div>
+      </a>
+    </div>
+
+    <p class="note"><b>참고 ·</b> 세 시안 모두 반응형이며, 사이트 선택 지도(존 탭 + 빈자리 클릭) → 결제 요약 → 간편결제 흐름을 데모로 담았습니다. 실제 350 사이트 <b>배치도 이미지</b>를 주시면 해당 영역에 실측 지도를 얹고, 예약 잠금·PG 연동은 백엔드 연동 단계에서 붙이면 됩니다.</p>
+  </div>
+</body>
+</html>
