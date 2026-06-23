@@ -1,3 +1,4 @@
+import Countdown from './Countdown'
 import styles from './Hero.module.css'
 
 export default function Hero() {
@@ -15,7 +16,8 @@ export default function Hero() {
           <span className="pill" style={{ background: '#fff', color: 'var(--ink)' }}>📅 2026.09.04–06</span>
           <span className="pill" style={{ background: '#fff', color: 'var(--ink)' }}>🎪 350 사이트</span>
         </div>
-        <a href="#book" className="btn yellow lg">내 사이트 예약하기 →</a>
+        <Countdown />
+        <a href="#book" className="btn yellow lg" style={{ marginTop: 32 }}>내 사이트 예약하기 →</a>
       </div>
       <div className={styles.photoRow}>
         <div className={`ph ${styles.photo}`}>CAMP VIBES PHOTO</div>

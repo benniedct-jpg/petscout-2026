@@ -1,3 +1,4 @@
+import useScrollReveal from '../hooks/useScrollReveal'
 import styles from './Program.module.css'
 
 const days = [
@@ -28,30 +29,33 @@ const days = [
 ]
 
 export default function Program() {
+  const ref = useScrollReveal()
   return (
     <section id="program">
       <div className="wrap">
-        <div className="sec-head">
-          <div className="eyebrow">3-Day Schedule</div>
-          <h2>도착하면 쉴 틈이 없어요.</h2>
-        </div>
-        <div className={styles.timeline}>
-          {days.map((d) => (
-            <div key={d.day} className={styles.tcard}>
-              <div className={`${styles.h} ${styles[d.color]}`}>
-                <span>{d.day}</span>
-                <span className="lat" style={{ fontSize: 22 }}>{d.date}</span>
+        <div className="reveal" ref={ref}>
+          <div className="sec-head">
+            <div className="eyebrow">3-Day Schedule</div>
+            <h2>도착하면 쉴 틈이 없어요.</h2>
+          </div>
+          <div className={styles.timeline}>
+            {days.map((d) => (
+              <div key={d.day} className={styles.tcard}>
+                <div className={`${styles.h} ${styles[d.color]}`}>
+                  <span>{d.day}</span>
+                  <span className="lat" style={{ fontSize: 22 }}>{d.date}</span>
+                </div>
+                <ul className={styles.list}>
+                  {d.items.map((item) => (
+                    <li key={item.time} className={styles.item}>
+                      <b className={`lat ${styles.time}`}>{item.time}</b>
+                      <span>{item.label}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <ul className={styles.list}>
-                {d.items.map((item) => (
-                  <li key={item.time} className={styles.item}>
-                    <b className={`lat ${styles.time}`}>{item.time}</b>
-                    <span>{item.label}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

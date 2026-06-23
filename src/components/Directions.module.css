@@ -1,0 +1,88 @@
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.mapBox {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.map {
+  aspect-ratio: 4/3;
+  border-radius: 16px;
+  border: 3px solid var(--line);
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.address {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--ink-soft);
+}
+
+.address b {
+  color: var(--ink);
+  font-size: 17px;
+}
+
+.mapLink {
+  display: inline-block;
+  margin-top: 8px;
+  font-family: 'Jua', sans-serif;
+  font-size: 14px;
+  color: var(--blue);
+}
+
+.routes {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 3px solid var(--line);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.route {
+  display: flex;
+  gap: 16px;
+  padding: 20px 24px;
+  border-bottom: 1px dashed rgba(21,19,14,.15);
+  align-items: flex-start;
+}
+
+.route:last-child {
+  border-bottom: 0;
+}
+
+.parking {
+  background: rgba(21,19,14,.03);
+}
+
+.icon {
+  font-size: 22px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.method {
+  font-size: 13px;
+  color: var(--coral);
+  letter-spacing: .08em;
+  margin-bottom: 4px;
+}
+
+.desc {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+@media (max-width: 840px) {
+  .inner { grid-template-columns: 1fr; }
+}

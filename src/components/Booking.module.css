@@ -5,6 +5,72 @@
   padding: 88px 0;
 }
 
+.remainBar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(0,0,0,.2);
+  border: 2px solid rgba(255,255,255,.2);
+  border-radius: 16px;
+  padding: 16px 24px;
+  margin-bottom: 24px;
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+.remainNum {
+  font-size: 48px;
+  color: var(--yellow);
+  line-height: 1;
+}
+
+.remainInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  font-size: 14px;
+  color: rgba(255,255,255,.8);
+}
+
+.progressWrap {
+  height: 8px;
+  background: rgba(255,255,255,.15);
+  border-radius: 999px;
+  overflow: hidden;
+  min-width: 120px;
+}
+
+.progress {
+  height: 100%;
+  background: var(--yellow);
+  border-radius: 999px;
+  transition: width 0.3s;
+}
+
+.hurry {
+  font-family: 'Jua', sans-serif;
+  font-size: 16px;
+}
+
+.confirmed {
+  margin-top: auto;
+  background: rgba(255,255,255,.1);
+  border: 2px solid rgba(255,255,255,.3);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  font-family: 'Jua', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.confirmed small {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 12px;
+  opacity: .7;
+}
+
 .ticket {
   display: grid;
   grid-template-columns: 1.4fr 0.9fr;
