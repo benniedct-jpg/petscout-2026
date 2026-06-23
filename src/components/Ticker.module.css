@@ -1,0 +1,20 @@
+.ticker {
+  background: var(--yellow);
+  border-bottom: 3px solid var(--line);
+  overflow: hidden;
+  padding: 12px 0;
+}
+
+.track {
+  display: flex;
+  gap: 36px;
+  white-space: nowrap;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 18px;
+  animation: roll 22s linear infinite;
+  text-transform: uppercase;
+}
+
+@keyframes roll {
+  to { transform: translateX(-50%); }
+}

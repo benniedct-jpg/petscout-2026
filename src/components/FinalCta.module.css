@@ -1,0 +1,19 @@
+.final {
+  background: var(--coral);
+  border-top: 3px solid var(--line);
+  text-align: center;
+  color: #fff;
+  padding: 88px 0;
+}
+
+.h2 {
+  font-size: clamp(40px, 8vw, 96px);
+  color: #fff;
+  text-shadow: 4px 4px 0 var(--ink);
+}
+
+.final p {
+  max-width: 38ch;
+  margin: 18px auto 28px;
+  font-size: 18px;
+}

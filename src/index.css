@@ -1,0 +1,38 @@
+:root {
+  --bg: #FBF8F0;
+  --paper: #FFFFFF;
+  --ink: #15130E;
+  --ink-soft: #5A554A;
+  --coral: #FF5A4D;
+  --blue: #2C4BE0;
+  --yellow: #FFC23B;
+  --line: #15130E;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#root {
+  width: 100%;
+}
