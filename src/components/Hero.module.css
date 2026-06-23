@@ -5,8 +5,11 @@
 }
 
 .heroInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  padding: 60px 26px 50px;
+  padding: 60px 26px 56px;
   position: relative;
 }
 
@@ -29,11 +32,11 @@
 }
 
 .when {
-  display: inline-flex;
+  display: flex;
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
-  margin: 26px 0 30px;
+  margin: 26px 0 0;
 }
 
 .sticker {

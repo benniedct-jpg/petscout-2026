@@ -17,7 +17,7 @@ export default function Hero() {
           <span className="pill" style={{ background: '#fff', color: 'var(--ink)' }}>🎪 350 사이트</span>
         </div>
         <Countdown />
-        <a href="#book" className="btn yellow lg" style={{ marginTop: 32 }}>내 사이트 예약하기 →</a>
+        <a href="#book" className="btn yellow lg">내 사이트 예약하기 →</a>
       </div>
       <div className={styles.photoRow}>
         <div className={`ph ${styles.photo}`}>CAMP VIBES PHOTO</div>

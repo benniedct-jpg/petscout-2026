@@ -1,12 +1,12 @@
 .wrap {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
-  margin: 20px 0 8px;
+  gap: 10px;
+  margin: 24px 0;
 }
 
-.label {
+.eyebrow {
   font-family: 'Archivo Black', sans-serif;
   font-size: 12px;
   letter-spacing: .14em;
@@ -16,45 +16,41 @@
 
 .units {
   display: flex;
-  align-items: center;
-  gap: 4px;
+  align-items: flex-start;
+  gap: 8px;
 }
 
 .unit {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 4px;
-  position: relative;
+  gap: 6px;
 }
 
 .num {
-  font-size: clamp(32px, 5vw, 56px);
+  font-size: clamp(36px, 6vw, 60px);
   color: #fff;
   background: rgba(0,0,0,.25);
   border: 2px solid rgba(255,255,255,.2);
   border-radius: 10px;
-  padding: 6px 14px;
-  min-width: 70px;
+  padding: 8px 16px;
+  min-width: 72px;
   text-align: center;
   line-height: 1;
+  display: block;
 }
 
 .sub {
-  font-family: 'Archivo Black', sans-serif;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: .1em;
   color: var(--yellow);
-  position: absolute;
-  bottom: -18px;
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
+  display: block;
 }
 
 .sep {
   font-family: 'Archivo Black', sans-serif;
-  font-size: 36px;
+  font-size: 40px;
   color: rgba(255,255,255,.4);
-  margin: 0 2px;
   line-height: 1;
+  margin-top: 8px;
 }

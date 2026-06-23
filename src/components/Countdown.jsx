@@ -6,38 +6,40 @@ const TARGET = new Date('2026-09-04T15:00:00+09:00')
 function calc() {
   const diff = TARGET - Date.now()
   if (diff <= 0) return { d: 0, h: 0, m: 0, s: 0 }
-  const d = Math.floor(diff / 86400000)
-  const h = Math.floor((diff % 86400000) / 3600000)
-  const m = Math.floor((diff % 3600000) / 60000)
-  const s = Math.floor((diff % 60000) / 1000)
-  return { d, h, m, s }
+  return {
+    d: Math.floor(diff / 86400000),
+    h: Math.floor((diff % 86400000) / 3600000),
+    m: Math.floor((diff % 3600000) / 60000),
+    s: Math.floor((diff % 60000) / 1000),
+  }
 }
 
 export default function Countdown() {
   const [t, setT] = useState(calc)
-
   useEffect(() => {
     const id = setInterval(() => setT(calc()), 1000)
     return () => clearInterval(id)
   }, [])
 
   const units = [
-    { label: 'DAYS',    val: t.d },
-    { label: 'HOURS',   val: t.h },
-    { label: 'MIN',     val: t.m },
-    { label: 'SEC',     val: t.s },
+    { label: 'DAYS',  val: t.d },
+    { label: 'HOURS', val: t.h },
+    { label: 'MIN',   val: t.m },
+    { label: 'SEC',   val: t.s },
   ]
 
   return (
     <div className={styles.wrap}>
-      <div className={styles.label}>개막까지</div>
+      <div className={styles.eyebrow}>개막까지</div>
       <div className={styles.units}>
         {units.map(({ label, val }, i) => (
-          <div key={label} className={styles.unit}>
-            <span className={`lat ${styles.num}`}>{String(val).padStart(2, '0')}</span>
-            <span className={styles.sub}>{label}</span>
-            {i < units.length - 1 && <span className={styles.sep}>:</span>}
-          </div>
+          <>
+            <div key={label} className={styles.unit}>
+              <span className={`lat ${styles.num}`}>{String(val).padStart(2, '0')}</span>
+              <span className={`lat ${styles.sub}`}>{label}</span>
+            </div>
+            {i < units.length - 1 && <span key={`sep-${i}`} className={styles.sep}>:</span>}
+          </>
         ))}
       </div>
     </div>
