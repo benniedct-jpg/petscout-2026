@@ -21,15 +21,15 @@ export default function Hero() {
       </div>
       <div className={styles.photoRow}>
         <div className={styles.photo}>
-          <img src="https://images.unsplash.com/photo-63Znf38gnXk?w=800&h=500&auto=format&fit=crop&q=80" alt="캠프 사이트 전경" className={styles.photoImg} />
+          <img src="https://images.unsplash.com/photo-1470246973918-29a93221c455?w=800&h=500&auto=format&fit=crop&q=80" alt="캠프 사이트 전경" className={styles.photoImg} />
           <span className={styles.photoLabel}>CAMP VIBES</span>
         </div>
         <div className={styles.photo}>
-          <img src="https://images.unsplash.com/photo-jqTpeyMJWmA?w=800&h=500&auto=format&fit=crop&q=80" alt="라이브 무대" className={styles.photoImg} />
+          <img src="https://images.unsplash.com/photo-1499364615650-ec38552f4f34?w=800&h=500&auto=format&fit=crop&q=80" alt="라이브 무대" className={styles.photoImg} />
           <span className={styles.photoLabel}>LIVE STAGE</span>
         </div>
         <div className={styles.photo}>
-          <img src="https://images.unsplash.com/photo-zVfQ95IwYCc?w=800&h=500&auto=format&fit=crop&q=80" alt="강아지 파티" className={styles.photoImg} />
+          <img src="https://images.unsplash.com/photo-1682424586055-0614848bc968?w=800&h=500&auto=format&fit=crop&q=80" alt="강아지 파티" className={styles.photoImg} />
           <span className={styles.photoLabel}>DOGS PARTY 🐾</span>
         </div>
       </div>
