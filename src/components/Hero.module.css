@@ -2,6 +2,21 @@
   background: var(--blue);
   color: #fff;
   border-bottom: 3px solid var(--line);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 하단에 강원도 숲 느낌의 초록 그라데이션 레이어 */
+.heroBand::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 130px;
+  background: linear-gradient(to top, rgba(29, 107, 68, 0.22) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .heroInner {
@@ -61,7 +76,7 @@
   top: 90px;
   right: 5%;
   transform: rotate(8deg);
-  background: var(--coral);
+  background: var(--green);
   color: #fff;
 }
 
@@ -74,7 +89,7 @@
 .photo {
   aspect-ratio: 16 / 10;
   border-right: 3px solid var(--line);
-  background-color: #cdd6f7;
+  background-color: #c5daca;
   color: rgba(21,19,14,.45);
 }
 

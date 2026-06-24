@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Fragment } from 'react'
 import styles from './Countdown.module.css'
 
 const TARGET = new Date('2026-09-04T15:00:00+09:00')
@@ -33,13 +33,13 @@ export default function Countdown() {
       <div className={styles.eyebrow}>개막까지</div>
       <div className={styles.units}>
         {units.map(({ label, val }, i) => (
-          <>
-            <div key={label} className={styles.unit}>
+          <Fragment key={label}>
+            <div className={styles.unit}>
               <span className={`lat ${styles.num}`}>{String(val).padStart(2, '0')}</span>
               <span className={`lat ${styles.sub}`}>{label}</span>
             </div>
-            {i < units.length - 1 && <span key={`sep-${i}`} className={styles.sep}>:</span>}
-          </>
+            {i < units.length - 1 && <span className={styles.sep}>:</span>}
+          </Fragment>
         ))}
       </div>
     </div>
