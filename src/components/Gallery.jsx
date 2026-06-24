@@ -1,15 +1,18 @@
 import useScrollReveal from '../hooks/useScrollReveal'
 import styles from './Gallery.module.css'
 
+const U = (id, w = 800, h = 560) =>
+  `https://images.unsplash.com/photo-${id}?w=${w}&h=${h}&auto=format&fit=crop&q=80`
+
 const photos = [
-  { label: '캠핑 사이트 전경', wide: true },
-  { label: '인디밴드 무대' },
-  { label: '댕댕이들 🐾' },
-  { label: '캠프파이어 🔥' },
-  { label: '미션 배지 수여식 🏅' },
-  { label: '반려동물 축제 부스', wide: true },
-  { label: '별빛 아래 공연' },
-  { label: '굿즈 패키지 🎁' },
+  { label: '캠핑 사이트 전경',    wide: true, src: U('YuR4iKgPOGA', 1200, 560) },
+  { label: '인디밴드 무대',                   src: U('pOVkooo9YEw') },
+  { label: '댕댕이들 🐾',                     src: U('NyetNfq-xfo') },
+  { label: '캠프파이어 🔥',                   src: U('t9v-buO0f74') },
+  { label: '미션 배지 수여식 🏅',             src: U('atHKx47BRfU') },
+  { label: '반려동물 축제 부스', wide: true, src: U('bUueTEY-FOc', 1200, 560) },
+  { label: '별빛 아래 공연',                  src: U('lFIRRdeyNIM') },
+  { label: '굿즈 패키지 🎁',                  src: U('FhDyEDf2mLo') },
 ]
 
 export default function Gallery() {
@@ -21,12 +24,11 @@ export default function Gallery() {
           <div className="sec-head">
             <div className="eyebrow">Gallery</div>
             <h2>이런 순간들이 기다려요.</h2>
-            <p className="lead">실제 사진 업로드 시 이 자리를 채웁니다.</p>
           </div>
           <div className={styles.grid}>
             {photos.map((p) => (
-              <div key={p.label} className={`ph ${styles.item} ${p.wide ? styles.wide : ''}`}>
-                {p.label}
+              <div key={p.label} className={`${styles.item} ${p.wide ? styles.wide : ''}`}>
+                <img src={p.src} alt={p.label} className={styles.img} loading="lazy" />
               </div>
             ))}
           </div>

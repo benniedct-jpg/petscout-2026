@@ -20,9 +20,18 @@ export default function Hero() {
         <a href="#book" className="btn yellow lg">지금 참여 신청하기 →</a>
       </div>
       <div className={styles.photoRow}>
-        <div className={`ph ${styles.photo}`}>CAMP VIBES PHOTO</div>
-        <div className={`ph ${styles.photo}`}>LIVE STAGE PHOTO</div>
-        <div className={`ph ${styles.photo}`}>DOGS PARTY PHOTO</div>
+        <div className={styles.photo}>
+          <img src="https://images.unsplash.com/photo-63Znf38gnXk?w=800&h=500&auto=format&fit=crop&q=80" alt="캠프 사이트 전경" className={styles.photoImg} />
+          <span className={styles.photoLabel}>CAMP VIBES</span>
+        </div>
+        <div className={styles.photo}>
+          <img src="https://images.unsplash.com/photo-jqTpeyMJWmA?w=800&h=500&auto=format&fit=crop&q=80" alt="라이브 무대" className={styles.photoImg} />
+          <span className={styles.photoLabel}>LIVE STAGE</span>
+        </div>
+        <div className={styles.photo}>
+          <img src="https://images.unsplash.com/photo-zVfQ95IwYCc?w=800&h=500&auto=format&fit=crop&q=80" alt="강아지 파티" className={styles.photoImg} />
+          <span className={styles.photoLabel}>DOGS PARTY 🐾</span>
+        </div>
       </div>
     </div>
   )

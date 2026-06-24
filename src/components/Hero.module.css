@@ -90,11 +90,39 @@
   aspect-ratio: 16 / 10;
   border-right: 3px solid var(--line);
   background-color: #c5daca;
-  color: rgba(21,19,14,.45);
+  position: relative;
+  overflow: hidden;
 }
 
 .photo:last-child {
   border-right: 0;
+}
+
+.photoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.photo:hover .photoImg {
+  transform: scale(1.05);
+}
+
+.photoLabel {
+  position: absolute;
+  bottom: 10px;
+  left: 12px;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #fff;
+  background: rgba(21, 19, 14, 0.5);
+  padding: 4px 10px;
+  border-radius: 6px;
+  backdrop-filter: blur(4px);
 }
 
 @media (max-width: 840px) {
